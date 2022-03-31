@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title> Hitung Luas Persegi </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +10,57 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="input-group mb-3 mt-4" style="width: 90%; margin-left: 10px">
+    <span class="input-group-text" id="inputGroup-sizing-default">Sisi</span>
+    <input
+      type="number"
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="input sisi 1"
+      [(ngModel)]="num1"
+    />
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="input-group mb-3 mt-4" style="width: 90%; margin-left: 10px">
+    <span class="input-group-text" id="inputGroup-sizing-default">Sisi</span>
+    <input
+      type="number"
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="input sisi 2"
+      [(ngModel)]="num2"
+    />
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    style="margin-left: 10px"
+    (click)="result()"
+  >
+    Hitung
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    style="margin-left: 235px"
+    (click)="clear()"
+  >
+    Reset
+  </button>
+  <div class="input-group mb-3 mt-4" style="width: 90%; margin-left: 10px">
+    <span class="input-group-text" id="inputGroup-sizing-default">Hasil</span>
+    <input
+      type="number"
+      class="form-control bg-light"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="hasil..."
+      value="{{num3}}"
+      disabled
+    />
+  </div>
 </ion-content>
